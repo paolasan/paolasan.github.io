@@ -1,3 +1,7 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .top-bar {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -35,7 +39,7 @@
 
 .top-bar li a {
     display: block;
-    width: 7em;
+    width: 8em;
     color: #333;
     text-align: center;
     text-decoration: none;
@@ -62,12 +66,11 @@
     background-position: center center;
     background-size: cover;
 
-    background-image: url('http://placehold.it/400x200');
+    background-image: url('Images/Profile/cara.jpg');
 }
 
 .name-title {
     text-align: center;
-    word-spacing: 2em;
     margin: 0;
     padding: 0;
 }
