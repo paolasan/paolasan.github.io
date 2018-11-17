@@ -1,7 +1,15 @@
-
 .top-bar {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+}
+
+.blank-space {
+    height: 3em;
 }
 
 .top-bar ul {
@@ -69,8 +77,8 @@ h1 {
 }
 
 .second-holder {
-    background-color: red;
     margin: 2em;
-    width: auto;
-    height: auto;
+    height: 30em;
+
+    border-style: double;
 }
