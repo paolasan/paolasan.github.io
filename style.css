@@ -1,3 +1,4 @@
+
 .top-bar {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -35,4 +36,41 @@
 .top-bar a:hover {
     color: black;
     font-weight: bold;
+}
+
+.profile-holder {
+    text-align: center;
+    margin: 1em;
+}
+
+.profile-picture {
+    display: inline-block;
+    /* position: relative; */
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    background-image: url('http://placehold.it/400x200');
+}
+
+.name-title {
+    text-align: center;
+    word-spacing: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.second-holder {
+    background-color: red;
+    margin: 2em;
+    width: auto;
+    height: auto;
 }
