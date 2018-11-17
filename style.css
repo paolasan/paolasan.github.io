@@ -1,3 +1,8 @@
+.top-bar {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
 .top-bar ul {
     list-style-type: none;
     margin: 0 1em 0 1em;
@@ -6,10 +11,17 @@
     background-color: #fff;
 
     border-bottom: .1em solid rgb(109, 109, 109);
+
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
-.top-bar li {
+.li-left {
     float: left;
+}
+
+.li-right {
+    float: right;
 }
 
 .top-bar li a {
