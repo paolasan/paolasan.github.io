@@ -123,8 +123,13 @@ p {
     border-radius: 50%;
     height: 1em;
     width: 1em;
+}
 
+.ball-fill {
     animation-name: fill-animation;
-    animation-duration: .05s;
     animation-fill-mode: forwards;
+}
+
+@keyframes fill-animation {
+    100% {background-color: black;}
 }
