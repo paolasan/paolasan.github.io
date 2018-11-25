@@ -2,6 +2,25 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+.profile-picture {
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-position: -5em -5em;
+    background-size: 200%;
+
+    background-image: url('Images/Profile/cara.jpg');
+
+    animation-name: opacity-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+
 .top-bar {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -10,6 +29,7 @@
     width: 100%;
     top: 0;
     background-color: #fff;
+    z-index: 1;
 }
 
 .blank-space {
@@ -55,27 +75,17 @@
     margin: 1em;
 }
 
-.profile-picture {
-    display: inline-block;
-    width: 10em;
-    height: 10em;
-    border-radius: 50%;
-
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-
-    background-image: url('Images/Profile/cara.jpg');
-
-    /* animation-name: opacity-animation;
-    animation-duration: 1s;
-    animation-fill-mode: forwards; */
-}
-
 .name-title {
+    opacity: 0;    
     text-align: center;
     margin: 0;
     padding: 0;
+
+    animation-name: opacity-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-delay: .3s;
 }
 
 h1 {
@@ -88,9 +98,16 @@ p {
 }
 
 .second-holder {
+    opacity: 0;
     margin: 2em;
     height: auto;
-    border-style: double;
+    /* border-style: double; */
+
+    animation-name: opacity-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-delay: .6s;
 }
 
 .description {
@@ -139,6 +156,6 @@ p {
 }
 
 @keyframes opacity-animation {
-    0% { opacity: 0;}
-    100% { opacity: 1;}
+    0% { position: relative; opacity : 0; top : -1em}
+    100% { position: relative; opacity : 1; top : 0}
 }
