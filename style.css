@@ -24,7 +24,7 @@
     background-color: #fff;
 
     border-bottom: .1em solid rgb(109, 109, 109);
-
+    
     grid-column-start: 2;
     grid-column-end: 3;
 }
@@ -66,6 +66,10 @@
     background-size: cover;
 
     background-image: url('Images/Profile/cara.jpg');
+
+    /* animation-name: opacity-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; */
 }
 
 .name-title {
@@ -132,4 +136,9 @@ p {
 
 @keyframes fill-animation {
     100% {background-color: black;}
+}
+
+@keyframes opacity-animation {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
 }
