@@ -20,13 +20,14 @@
     width: 100%;
     height: auto;
 
-    opacity: 0;
+    visibility: hidden;
   }
 
   .on-image-loaded {
+    visibility: visible;
     animation-name: opacity-animation;
     animation-duration: 2s;
-    animation-fill-mode: forwards;
+    /* animation-fill-mode: forwards; */
     animation-timing-function: ease-in-out;
   }
 
