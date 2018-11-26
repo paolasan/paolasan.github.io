@@ -32,7 +32,8 @@
   }
 
   .column img:hover {
-      /* opacity: .5; */
+      opacity: .8;
+      transition: .3s;
   }
 
   /* Responsive layout - makes a two column-layout instead of four columns */

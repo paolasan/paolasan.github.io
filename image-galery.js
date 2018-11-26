@@ -16,21 +16,21 @@ function showImage(p_image) {
     p_image.style.visibility = 'visible';
     p_image.classList.add("on-image-loaded");
 
-    p_image.addEventListener('mouseover', function(p_event) {
-        for (f_index = 0; f_index < m_imageArray.length; f_index++) {
-            let f_image = m_imageArray[f_index];
+    // p_image.addEventListener('mouseover', function(p_event) {
+    //     for (f_index = 0; f_index < m_imageArray.length; f_index++) {
+    //         let f_image = m_imageArray[f_index];
 
-            f_image.style.opacity = .5;
-        }
+    //         f_image.style.opacity = .5;
+    //     }
 
-        p_image.style.opacity = 1;
-    });
+    //     p_image.style.opacity = 1;
+    // });
 
-    p_image.addEventListener('mouseout', function (p_event) {
-        for (f_index = 0; f_index < m_imageArray.length; f_index++) {
-            let f_image = m_imageArray[f_index];
+    // p_image.addEventListener('mouseout', function (p_event) {
+    //     for (f_index = 0; f_index < m_imageArray.length; f_index++) {
+    //         let f_image = m_imageArray[f_index];
 
-            f_image.style.opacity = 1;
-        }
-    });
+    //         f_image.style.opacity = 1;
+    //     }
+    // });
 }
