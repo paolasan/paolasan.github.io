@@ -19,12 +19,21 @@
     
     width: 100%;
     height: auto;
+
+    opacity: 0;
+  }
+
+  .on-image-loaded {
+    animation-name: opacity-animation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
   }
 
   .column img:hover {
-      opacity: .5;
+      /* opacity: .5; */
   }
-  
+
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
     .column {

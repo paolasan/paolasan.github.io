@@ -1,19 +1,21 @@
+let m_imageArray = document.images;
 
-function onHoverImage() {
-    let m_columnArray = document.getElementsByClassName("column");
-    let m_imageArray = [];
+for (f_index = 0; f_index < m_imageArray.length; f_index++) {
+    let f_image = m_imageArray[f_index];
 
-    m_columnArray[0].children[0].style.opacity = .5;
-
-    for(f_column in m_columnArray) {
-        for(f_image in f_column.children) {
-            m_imageArray.push(f_image);
-        }
+    if(f_image.complete) {
+        showImage(f_image);
     }
 
-    for(f_image in m_imageArray) {
-        f_image.style.opacity = .5;
+    else {
+        f_image.addEventListener('load', showImage(f_image));
     }
 }
 
-onHoverImage();
+function showImage(p_image) {
+    p_image.classList.add("on-image-loaded");
+}
+
+
+// Image loading.
+
