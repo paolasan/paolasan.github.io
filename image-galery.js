@@ -1,8 +1,22 @@
-let m_imageArray = document.images;
+let m_imageArray = [];
 // Get the modal
 var modal = document.getElementById('myModal');
 
 let selectedImageIndex = 0;
+
+let m_rowArray = document.getElementsByClassName('row');
+
+for(f_rowIndex = 0; f_rowIndex < m_rowArray.length; f_rowIndex ++) {
+
+    let f_row = m_rowArray[f_rowIndex];
+    for(f_columnIndex = 0; f_columnIndex < f_row.children.length; f_columnIndex++) {
+        let f_column = f_row.children[f_columnIndex];
+        for(f_imageIndex = 0; f_imageIndex < f_column.children.length; f_imageIndex ++) {
+            let f_image = f_column.children[f_imageIndex];
+            m_imageArray.push(f_image);
+        }
+    }
+}
 
 for (f_index = 0; f_index < m_imageArray.length; f_index++) {
     let f_image = m_imageArray[f_index];
@@ -28,7 +42,6 @@ function showImage(p_image) {
 function setModalLogic(p_index) {
 
     let m_image = m_imageArray[p_index];
-    selectedImageIndex = p_index;
 
     m_image.onclick = function(){
         setModalImage(p_index);
@@ -44,6 +57,7 @@ function setModalLogic(p_index) {
 }
 
 function setModalImage(p_index) {
+    selectedImageIndex = p_index;
     var m_image = m_imageArray[p_index];
     modal.style.display = "block";
     let m_modal = document.getElementById("img01");
@@ -63,17 +77,23 @@ document.addEventListener('keydown', function (p_event) {
         m_next = -1;
     }
 
+    if(m_next == 0) {
+        return;
+    }
+
     nextImage(m_next);
 });
 
 function nextImage(p_next) {
     selectedImageIndex += p_next;
 
-    if(selectedImageIndex > m_imageArray.length) {
+    if(selectedImageIndex >= m_imageArray.length) {
         selectedImageIndex = 0;
     }
 
     if(selectedImageIndex < 0) {
         selectedImageIndex = m_imageArray.length -1;
     }
+
+    setModalImage(selectedImageIndex);
 }
