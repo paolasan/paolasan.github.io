@@ -37,8 +37,6 @@ function showImage(p_image) {
     p_image.classList.add("on-image-loaded");
 }
 
-// Modal stuff.
-
 function setModalLogic(p_index) {
 
     let m_image = m_imageArray[p_index];
@@ -68,6 +66,10 @@ document.addEventListener('keydown', function (p_event) {
     var m_keyCode = p_event.keyCode;
    
     let m_next = 0;
+
+    if(m_keyCode == 27) {
+        modal.style.display = 'none';
+    }
 
     if(m_keyCode == 37) {
         m_next = 1;
