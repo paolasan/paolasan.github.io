@@ -1,4 +1,6 @@
 let m_imageArray = document.images;
+// Get the modal
+var modal = document.getElementById('myModal');
 
 for (f_index = 0; f_index < m_imageArray.length; f_index++) {
     let f_image = m_imageArray[f_index];
@@ -16,21 +18,25 @@ function showImage(p_image) {
     p_image.style.visibility = 'visible';
     p_image.classList.add("on-image-loaded");
 
-    // p_image.addEventListener('mouseover', function(p_event) {
-    //     for (f_index = 0; f_index < m_imageArray.length; f_index++) {
-    //         let f_image = m_imageArray[f_index];
+    setModalLogic(p_image);
+}
 
-    //         f_image.style.opacity = .5;
-    //     }
+// Modal stuff.
 
-    //     p_image.style.opacity = 1;
-    // });
+function setModalLogic(p_image) {
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    p_image.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
 
-    // p_image.addEventListener('mouseout', function (p_event) {
-    //     for (f_index = 0; f_index < m_imageArray.length; f_index++) {
-    //         let f_image = m_imageArray[f_index];
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
-    //         f_image.style.opacity = 1;
-    //     }
-    // });
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+    modal.style.display = "none";
+    }
 }
