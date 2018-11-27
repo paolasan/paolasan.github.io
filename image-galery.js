@@ -6,6 +6,8 @@ let selectedImageIndex = 0;
 
 let m_rowArray = document.getElementsByClassName('row');
 
+let isModalOpen = false;
+
 for(f_rowIndex = 0; f_rowIndex < m_rowArray.length; f_rowIndex ++) {
 
     let f_row = m_rowArray[f_rowIndex];
@@ -38,10 +40,10 @@ function showImage(p_image) {
 }
 
 function setModalLogic(p_index) {
-
     let m_image = m_imageArray[p_index];
 
-    m_image.onclick = function(){
+    m_image.onclick = function() {
+        isModalOpen = true;
         setModalImage(p_index);
     }
 
@@ -50,7 +52,7 @@ function setModalLogic(p_index) {
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() { 
-    modal.style.display = "none";
+        closeModal();
     }
 }
 
@@ -62,13 +64,18 @@ function setModalImage(p_index) {
     m_modal.src = m_image.src;
 }
 
+function closeModal() {
+    isModalOpen = false;
+    modal.style.display = "none";
+}
+
 document.addEventListener('keydown', function (p_event) {
     var m_keyCode = p_event.keyCode;
    
     let m_next = 0;
 
     if(m_keyCode == 27) {
-        modal.style.display = 'none';
+        closeModal();
     }
 
     if(m_keyCode == 37) {
@@ -79,11 +86,9 @@ document.addEventListener('keydown', function (p_event) {
         m_next = -1;
     }
 
-    if(m_next == 0) {
-        return;
+    if(m_next != 0 && isModalOpen) {
+        nextImage(m_next);
     }
-
-    nextImage(m_next);
 });
 
 function nextImage(p_next) {
