@@ -9,7 +9,7 @@ function animate(p_id, p_duration, p_amount) {
         m_element.children[f_index].classList.add("ball-fill");
 
         m_element.children[f_index].style.animationDuration = p_duration + "s";
-        m_element.children[f_index].style.animationDelay = (.075 * f_index + 1) + "s";
+        m_element.children[f_index].style.animationDelay = (.075 * f_index + 2) + "s";
     }
 }
 
