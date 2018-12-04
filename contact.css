@@ -2,6 +2,10 @@
     width: 40%;
     margin: auto;
     padding-top: 4em;
+
+    animation-name: opacity-animation;
+    animation-duration: .8s;
+    /* animation-timing-function: ease-in-out; */
 }
 
 .input-parent :nth-child(1) {
@@ -32,10 +36,23 @@
 }
 
 #submit-button {
+    all: unset;
+    border-radius: 1em;
+    color: rgba(0, 0, 0, 0.5);
     grid-row: 4 / 5;
     grid-column: 2 / 3;
     margin: 0 0 0 auto;
     padding: 0 3em;
+    font-weight: bold;
+
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.5);
+    border-width: .1em;
+}
+
+#submit-button:hover {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;   
 }
 
 .input-parent {
