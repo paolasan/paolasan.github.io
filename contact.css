@@ -1,0 +1,44 @@
+.content {
+    width: 60%;
+    margin: auto;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+    padding-top: 4em;
+}
+
+.input-parent {
+    /* background-color: rgba(0, 0, 0, 0.103); */
+    height: 4em;
+
+    display: grid;
+    grid-template-columns: 1fr .5fr 1fr;
+}
+
+.sub-input-parent {
+    margin: .5em;
+}
+
+.input-parent input {
+    all: unset;
+    height: 2.9em;
+    width: 100%;
+}
+
+.input-line {
+    height: .1em;
+    background-color: black;
+
+    width: 0%;
+
+    animation-name: expand;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes expand {
+    from {width: 0%}
+    to {width: 100%;}
+}
+
