@@ -27,13 +27,20 @@
 
 .input-line {
     height: .1em;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
 
     width: 0%;
+}
 
+.show-line {
     animation-name: expand;
     animation-duration: 1s;
-    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.hide-line {
+    animation-name: contract;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
@@ -42,3 +49,7 @@
     to {width: 100%;}
 }
 
+@keyframes contract {
+    from {width: 100%}
+    to {width: 0%;}
+}
