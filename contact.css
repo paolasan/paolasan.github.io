@@ -1,18 +1,30 @@
 .content {
-    width: 60%;
+    width: 40%;
     margin: auto;
-
-    display: grid;
-    grid-template-rows: 1fr 1fr 5fr 1fr;
     padding-top: 4em;
 }
 
-.input-parent {
-    /* background-color: rgba(0, 0, 0, 0.103); */
-    height: 4em;
+.input-parent :nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
 
+.input-parent :nth-child(2){
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.input-parent :nth-child(3) {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+}
+
+.input-parent {
     display: grid;
-    grid-template-columns: 1fr .5fr 1fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    grid-gap: .3em;
 }
 
 .sub-input-parent {
@@ -21,14 +33,14 @@
 
 .input-parent input {
     all: unset;
-    height: 2.9em;
     width: 100%;
+    position: relative;
+    bottom: .3em;
 }
 
 .input-line {
     height: .1em;
     background-color: rgba(0, 0, 0, 0.5);
-
     width: 0%;
 }
 
