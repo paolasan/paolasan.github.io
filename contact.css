@@ -19,12 +19,24 @@
     grid-row: 2 / 3;
 }
 
+.input-parent :nth-child(4) {
+    grid-column: 1 / 4;
+    grid-row: 3 / 5;
+
+    height: min-content;
+}
+
+.input-parent :nth-child(4) :nth-child(1) {
+    height: 10em;
+    vertical-align: text-top;
+}
+
 .input-parent {
     display: grid;
     grid-template-rows: 1fr 1fr 5fr 1fr;
     grid-template-columns: 1fr 1fr;
 
-    grid-gap: .3em;
+    grid-gap: .5em;
 }
 
 .sub-input-parent {
@@ -36,6 +48,11 @@
     width: 100%;
     position: relative;
     bottom: .3em;
+}
+
+.input-parent textarea {
+    all: unset;
+    width: 100%;
 }
 
 .input-line {
