@@ -31,6 +31,13 @@
     vertical-align: text-top;
 }
 
+#submit-button {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+    margin: 0 0 0 auto;
+    padding: 0 3em;
+}
+
 .input-parent {
     display: grid;
     grid-template-rows: 1fr 1fr 5fr 1fr;
