@@ -2,9 +2,9 @@
 .accordion {
     color: #333;
     cursor: pointer;
-    padding: 18px;
-    width: 100%;
+    padding: 1em;
     text-align: left;
+    font-size: 1em;
 
     border: none;
     outline: none;
@@ -16,6 +16,11 @@
 
     transition: 0.4s;
   }
+
+    .accordion-holder{
+        width: 60%;
+        margin: auto;
+    }
   
   /* Style the accordion panel. Note: hidden by default */
   .panel {
