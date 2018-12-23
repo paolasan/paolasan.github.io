@@ -36,7 +36,6 @@ for (f_index = 0; f_index < m_imageArray.length; f_index++) {
 
 function showImage(p_image) {
     p_image.style.visibility = 'visible';
-    p_image.classList.add("on-image-loaded");
 }
 
 function setModalLogic(p_index) {
