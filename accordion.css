@@ -17,7 +17,16 @@
     transition: 0.4s;
   }
 
-    .accordion-holder{
+  .accordion:hover {
+    font-weight: bold;
+    transition: 0.4s;
+  }
+
+ .active {
+     font-weight: bold;
+ }
+
+ .accordion-holder {
         width: 60%;
         margin: auto;
     }
