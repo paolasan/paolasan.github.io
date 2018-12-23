@@ -52,7 +52,7 @@
 }
 
 #submit-button:hover {
-    font-size: 110%;
+    color: #333;
     transition-duration: .2s;
     /* color: white;    */
 }
