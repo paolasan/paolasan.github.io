@@ -21,7 +21,12 @@
     </div>
 
     <div class="content">
-        <div class="input-parent">
+
+        <div id="feedback-panel">
+            <p style="font-size:1.2em">El email fue enviado correctamente.</p>
+        </div>
+        <div id="contact-panel">
+            <div class="input-parent">
             <div class="sub-input-parent">
                 <input type="text" id="contact-name" name="Nombre" placeholder="Nombre...">
                 <div class="input-line"></div>
@@ -39,9 +44,12 @@
                 <div class="input-line"></div>
             </div>
             <button id="submit-button"> Enviar </button>
+            </div>
         </div>
+
     </div>
 </body>
 
 <script src="contact.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </html>

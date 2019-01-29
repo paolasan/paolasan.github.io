@@ -1,5 +1,8 @@
 inputArray = document.getElementsByClassName('sub-input-parent');
 
+let feedbackPanel = document.getElementById('feedback-panel');
+feedbackPanel.style.visibility = 'hidden';
+
 for(f_index = 0; f_index < inputArray.length; f_index++) {
     
     let m_parent = inputArray[f_index];
@@ -29,27 +32,26 @@ submintButton.addEventListener('click', function() {
     // Create Message.
     let m_content = contentField.value + "\n" + nameField.value;
 
-    let m_json = JSON.stringify({
+    const m_body = {
         email : emailField.value,
         subject : subjectField.value,
         content : m_content
-    });
+    };
 
-    console.log(m_json);
+    console.log(m_body);
 
-    postRequest(m_json);
+    postRequest(m_body);
+
+    alertUser();
 });
 
-function postRequest(p_json) {
+function alertUser() {
+    let m_contactPanel = document.getElementById('contact-panel');
+    m_contactPanel.style.visibility = 'hidden';
+    feedbackPanel.style.visibility = 'visible';
+}
+
+function postRequest(p_body) {
     const m_url = 'https://us-central1-portfolio-1717.cloudfunctions.net/contact';
-
-    const m_parameters = {
-        headers: {
-            'content-type':'application/json'
-        },
-        body: p_json,
-        method: 'POST'
-    }
-
-    fetch(m_url, m_parameters);
+    $.post(m_url, p_body);
 }
