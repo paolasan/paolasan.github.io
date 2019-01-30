@@ -14,7 +14,8 @@ for(f_rowIndex = 0; f_rowIndex < m_rowArray.length; f_rowIndex ++) {
     for(f_columnIndex = 0; f_columnIndex < f_row.children.length; f_columnIndex++) {
         let f_column = f_row.children[f_columnIndex];
         for(f_imageIndex = 0; f_imageIndex < f_column.children.length; f_imageIndex ++) {
-            let f_image = f_column.children[f_imageIndex];
+            //let f_image = f_column.children[f_imageIndex].nextElementSibling;
+            let f_image = f_column.children[f_imageIndex].children[0];
             m_imageArray.push(f_image);
         }
     }
